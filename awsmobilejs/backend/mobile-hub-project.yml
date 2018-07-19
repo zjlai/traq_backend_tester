@@ -1,0 +1,102 @@
+--- !com.amazonaws.mobilehub.v0.Project 
+apps:
+  web: !com.amazonaws.mobilehub.v0.AppDO {}
+features:
+  cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
+    components:
+      MyWordBankCRUD: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: MyWordBankCRUD
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /MyWordBank: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/MyWordBank-20180718151010.zip
+            description: 'Handler for calls to resource path : /MyWordBank/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: pvCnb8Sq6IDkF2WzR9/PMpZ8mHtW7bZ4bp1dOwdRulE=
+            memorySize: '128'
+            modified: '2018-07-18T07:11:52.853+0000'
+            name: MyWordBank
+            runtime: nodejs6.10
+            timeout: '3'
+            version: 2Yvua8TDUn1vQ0gnHU9RIC2tZ3LdmBp1
+          '/MyWordBank/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/MyWordBank-20180718151010.zip
+            description: 'Handler for calls to resource path : /MyWordBank/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: pvCnb8Sq6IDkF2WzR9/PMpZ8mHtW7bZ4bp1dOwdRulE=
+            memorySize: '128'
+            modified: '2018-07-18T07:11:52.853+0000'
+            name: MyWordBank
+            runtime: nodejs6.10
+            timeout: '3'
+            version: 35P5vHXrHe7A9PSUiNQyuTwdI_m5ozbc
+  content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
+    attributes:
+      enabled: true
+      visibility: public-global
+    components:
+      release: !com.amazonaws.mobilehub.v0.Bucket {}
+  database: !com.amazonaws.mobilehub.v0.Database 
+    components:
+      database-nosql: !com.amazonaws.mobilehub.v0.NoSQLDatabase 
+        tables:
+          - !com.amazonaws.mobilehub.v0.NoSQLTable 
+            attributes:
+              dateLearned: S
+              dateMastered: S
+              definition: S
+              examples: M
+              records: M
+              revisedCount: N
+              revisedDuration: N
+              status: S
+              userId: S
+              word: S
+              wordlist: S
+            hashKeyName: userId
+            hashKeyType: S
+            indexes:
+              - !com.amazonaws.mobilehub.v0.NoSQLIndex 
+                hashKeyName: userId
+                hashKeyType: S
+                indexName: userId-word
+                rangeKeyName: word
+                rangeKeyType: S
+              - !com.amazonaws.mobilehub.v0.NoSQLIndex 
+                hashKeyName: userId
+                hashKeyType: S
+                indexName: userId-wordlist
+                rangeKeyName: wordlist
+                rangeKeyType: S
+            rangeKeyName: status
+            rangeKeyType: S
+            tableName: ___DYNAMIC_PREFIX___-MyWordBank
+            tablePrivacy: private
+  mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
+    components:
+      analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}
+  sign-in: !com.amazonaws.mobilehub.v0.SignIn 
+    attributes:
+      enabled: true
+      optional-sign-in: false
+    components:
+      sign-in-user-pools: !com.amazonaws.mobilehub.v0.UserPoolsIdentityProvider 
+        attributes:
+          mfa-configuration: OFF
+          name: userpool
+          password-policy: !com.amazonaws.mobilehub.ConvertibleMap 
+            min-length: '8'
+            require-lower-case: true
+            require-numbers: false
+            require-symbols: false
+            require-upper-case: true
+          standard-attributes: '["birthdate","email","family_name","gender","given_name"]'
+          username-attributes: '["email"]'
+name: Kaplan-2018-07-16-17-45-26
+region: ap-southeast-1

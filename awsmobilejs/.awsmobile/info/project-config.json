@@ -1,0 +1,6 @@
+{
+	"SourceDir": "",
+	"DistributionDir": "build",
+	"BuildCommand": "quasar build",
+	"StartCommand": "quasar.cmd dev"
+}
