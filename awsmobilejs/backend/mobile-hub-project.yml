@@ -96,7 +96,7 @@ features:
             require-numbers: false
             require-symbols: false
             require-upper-case: true
-          standard-attributes: '["birthdate","email","family_name","gender","given_name"]'
+          standard-attributes: '["birthdate","family_name","gender","name"]'
           username-attributes: '["email"]'
 name: Kaplan-2018-07-16-17-45-26
 region: ap-southeast-1
