@@ -19,8 +19,7 @@ export default [
           { path: 'signin', component: () => import('components/auth/SignIn') },
           { path: 'confirmsignup', component: () => import('components/auth/ConfirmSignUp') },
           { path: 'forgotpassword', component: () => import('components/auth/ForgotPassword') },
-          { path: 'signout', component: () => import('components/auth/SignOut') },
-          { path: 'verify', component: () => import('pages/Verify') }
+          { path: 'signout', component: () => import('components/auth/SignOut') }
         ]
       }
     ]
