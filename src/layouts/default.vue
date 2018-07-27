@@ -32,8 +32,12 @@
       >
         <q-list-header>API Functions</q-list-header>
         <q-item to="/authentication">
+          <q-item-side icon="" />
+          <q-item-main label="Authentication" />
+        </q-item>
+        <q-item to="/words">
           <q-item-side icon="lock" />
-          <q-item-main label="Authentication" sublabel="Sign In / Sign Out" />
+          <q-item-main label="Words" />
         </q-item>
       </q-list>
     </q-layout-drawer>

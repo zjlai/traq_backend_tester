@@ -80,7 +80,6 @@ export default {
         .then(user => {
           logger.debug('sign in success', user)
           this.$store.commit('UserStore/setUser', user)
-          console.log(this.$store)
           return user
         })
         .then(user => {

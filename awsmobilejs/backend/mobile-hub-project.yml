@@ -6,36 +6,33 @@ features:
     components:
       MyWordBankCRUD: !com.amazonaws.mobilehub.v0.API 
         attributes:
+          disable-aws-auth: true
           name: MyWordBankCRUD
           requires-signin: false
           sdk-generation-stage-name: Development
         paths:
           /MyWordBank: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/MyWordBank-20180718151010.zip
             description: 'Handler for calls to resource path : /MyWordBank/{proxy+}'
-            enableCORS: true
             environment: {}
-            handler: lambda.handler
-            hashcode: pvCnb8Sq6IDkF2WzR9/PMpZ8mHtW7bZ4bp1dOwdRulE=
+            handler: index.handler
+            hashcode: ec/FflPtcMNFp65bi+7XnZ9ZxiYhQHuQefHm0scJQMU=
             memorySize: '128'
-            modified: '2018-07-18T07:11:52.853+0000'
-            name: MyWordBank
+            modified: '2018-07-26T09:47:58.980+0000'
+            name: WordBank
             runtime: nodejs6.10
             timeout: '3'
-            version: 2Yvua8TDUn1vQ0gnHU9RIC2tZ3LdmBp1
+            version: dERdkbimb4pSIjYB6kY.y9.euK3xKGxD
           '/MyWordBank/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/MyWordBank-20180718151010.zip
             description: 'Handler for calls to resource path : /MyWordBank/{proxy+}'
-            enableCORS: true
             environment: {}
-            handler: lambda.handler
-            hashcode: pvCnb8Sq6IDkF2WzR9/PMpZ8mHtW7bZ4bp1dOwdRulE=
+            handler: index.handler
+            hashcode: ec/FflPtcMNFp65bi+7XnZ9ZxiYhQHuQefHm0scJQMU=
             memorySize: '128'
-            modified: '2018-07-18T07:11:52.853+0000'
-            name: MyWordBank
+            modified: '2018-07-26T09:47:58.980+0000'
+            name: WordBank
             runtime: nodejs6.10
             timeout: '3'
-            version: 35P5vHXrHe7A9PSUiNQyuTwdI_m5ozbc
+            version: vHOaOSSdOPMP.qsqRhx2rGlMi8l3cAmY
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true

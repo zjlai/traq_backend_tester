@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import routes from './routes'
+import routes, { AuthFilter } from './routes'
 
 Vue.use(VueRouter)
 
@@ -20,5 +20,7 @@ const Router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
   routes
 })
+
+Router.beforeEach(AuthFilter)
 
 export default Router

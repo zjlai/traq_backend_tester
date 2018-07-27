@@ -68,6 +68,9 @@
           >
             <q-datetime v-model="newUser.attributes.birthdate" format="YYYY-MM-DD" type="date" />
           </q-field>
+          <p class="text-negative text-italic q-pt-md" v-if="error">
+            *{{ error }}
+          </p>
         </div>
       </q-card-main>
       <q-card-actions>
@@ -100,7 +103,8 @@ export default {
       genderOptions: [
         { label: 'Male', value: 'M' },
         { label: 'Female', value: 'F' }
-      ]
+      ],
+      error: ''
     }
   },
   validations: {
@@ -127,8 +131,6 @@ export default {
   },
   methods: {
     signUp (event) {
-      console.log(event)
-      console.log(this.newUser)
       this.newUser.attributes.birthdate = this.newUser.attributes.birthdate.substring(0, 10)
       this.$auth.signUp(this.newUser)
         .then(data => {
@@ -136,13 +138,16 @@ export default {
           logger.debug('sign up success', data)
           this.$router.push('/authentication/confirmSignUp')
         })
-        .catch(err => logger.error('sign up error', err))
+        .catch(err => this.setError(err))
     },
     signIn: () => {
       this.$router.push('/authentication/signin')
     },
     confirm: () => {
       this.$router.push('/authentication/confirmsignup')
+    },
+    setError (err) {
+      this.error = err.message || err
     }
   }
 }

@@ -1,36 +1,37 @@
 <template>
   <q-page padding>
-    <h3>Authentication Functions</h3>
-    <p>You have to be logged in to access other functions
+    <h3>Word Bank</h3>
+    <p>
+      Word Bank stored in the DB.
     </p>
     <div class="row">
       <div class="col">
         <q-list link highlight separator no-border>
           <q-list-header>
-            Authentication Functions
+            Word Bank Functions
           </q-list-header>
           <q-item-separator />
-          <q-item link to="/authentication/signin">
+          <q-item link to="/words/wordbank">
             <q-item-main>
-              Sign In
+              Word Bank
             </q-item-main>
           </q-item>
-          <q-item link to="/authentication/signup">
+          <q-item link to="/words/signup">
             <q-item-main>
               Register New User
             </q-item-main>
           </q-item>
-          <q-item link to="/authentication/confirmsignup">
+          <q-item link to="/words/confirmsignup">
             <q-item-main>
               Confirm Sign Up
             </q-item-main>
           </q-item>
-          <q-item link to="/authentication/forgotpassword">
+          <q-item link to="/words/forgotpassword">
             <q-item-main>
               Forgot Password
             </q-item-main>
           </q-item>
-          <q-item link to="/authentication/signout">
+          <q-item link to="/words/signout">
             <q-item-main>
               Sign Out
             </q-item-main>
@@ -46,7 +47,7 @@
 
 <script>
 export default {
-  name: 'Authentication',
+  name: 'Wordbank',
   data () {
     return {
     }
