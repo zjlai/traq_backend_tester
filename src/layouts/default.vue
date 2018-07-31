@@ -35,7 +35,7 @@
           <q-item-side icon="" />
           <q-item-main label="Authentication" />
         </q-item>
-        <q-item to="/words">
+        <q-item to="/wordlists">
           <q-item-side icon="lock" />
           <q-item-main label="Words" />
         </q-item>

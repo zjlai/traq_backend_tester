@@ -4,35 +4,38 @@ apps:
 features:
   cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
     components:
-      MyWordBankCRUD: !com.amazonaws.mobilehub.v0.API 
+      wordListCRUD: !com.amazonaws.mobilehub.v0.API 
         attributes:
-          disable-aws-auth: true
-          name: MyWordBankCRUD
+          name: wordListCRUD
           requires-signin: false
           sdk-generation-stage-name: Development
         paths:
-          /MyWordBank: !com.amazonaws.mobilehub.v0.Function 
-            description: 'Handler for calls to resource path : /MyWordBank/{proxy+}'
+          /wordList: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/wordList-20180727231101.zip
+            description: 'Handler for calls to resource path : /wordList/{proxy+}'
+            enableCORS: true
             environment: {}
-            handler: index.handler
-            hashcode: ec/FflPtcMNFp65bi+7XnZ9ZxiYhQHuQefHm0scJQMU=
+            handler: lambda.handler
+            hashcode: 6kk5dMUi2EUtJ6xCwF6K4Yj1zx02+KznOjxBUyh5xio=
             memorySize: '128'
-            modified: '2018-07-26T09:47:58.980+0000'
-            name: WordBank
+            modified: '2018-07-27T15:12:46.967+0000'
+            name: wordList
             runtime: nodejs6.10
             timeout: '3'
-            version: dERdkbimb4pSIjYB6kY.y9.euK3xKGxD
-          '/MyWordBank/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            description: 'Handler for calls to resource path : /MyWordBank/{proxy+}'
+            version: cYEMGMC_Z74uBBQbt2vDoKPgdaA28fYx
+          '/wordList/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/wordList-20180727231101.zip
+            description: 'Handler for calls to resource path : /wordList/{proxy+}'
+            enableCORS: true
             environment: {}
-            handler: index.handler
-            hashcode: ec/FflPtcMNFp65bi+7XnZ9ZxiYhQHuQefHm0scJQMU=
+            handler: lambda.handler
+            hashcode: 6kk5dMUi2EUtJ6xCwF6K4Yj1zx02+KznOjxBUyh5xio=
             memorySize: '128'
-            modified: '2018-07-26T09:47:58.980+0000'
-            name: WordBank
+            modified: '2018-07-27T15:12:46.967+0000'
+            name: wordList
             runtime: nodejs6.10
             timeout: '3'
-            version: vHOaOSSdOPMP.qsqRhx2rGlMi8l3cAmY
+            version: Ua3Ajqq8PUDuNuHh8.7wIM8bXjkXEus8
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
@@ -75,6 +78,29 @@ features:
             rangeKeyType: S
             tableName: ___DYNAMIC_PREFIX___-MyWordBank
             tablePrivacy: private
+          - !com.amazonaws.mobilehub.v0.NoSQLTable 
+            attributes:
+              dateCreated: S
+              status: S
+              studentCount: N
+              userId: S
+              wordCount: S
+              wordListId: S
+              wordListName: S
+              words: L
+            hashKeyName: userId
+            hashKeyType: S
+            indexes:
+              - !com.amazonaws.mobilehub.v0.NoSQLIndex 
+                hashKeyName: userId
+                hashKeyType: S
+                indexName: userId-studentCount
+                rangeKeyName: studentCount
+                rangeKeyType: N
+            rangeKeyName: wordListId
+            rangeKeyType: S
+            tableName: ___DYNAMIC_PREFIX___-wordList
+            tablePrivacy: public
   mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
     components:
       analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}

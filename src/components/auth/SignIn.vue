@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{userState}}
     <q-card class="self-center q-pa-lg" style="width:80%;">
       <q-card-title>
         Sign In

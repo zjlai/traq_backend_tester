@@ -55,16 +55,16 @@ export default [
     ]
   },
   {
-    path: '/words',
+    path: '/wordlists',
     component: () => import('layouts/default'),
     children: [
       {
-        name: 'words',
+        name: 'wordlist',
         path: '',
-        component: () => import('pages/words'),
+        component: () => import('pages/wordlists'),
         children: [
-        //  { path: 'signup', component: () => import('components/auth/SignUp') },
-        //  { path: 'signin', component: () => import('components/auth/SignIn') },
+          { path: 'bank', component: () => import('components/wordlist/wordlists_bank') },
+          { path: 'create', component: () => import('components/wordlist/create') }
         //  { path: 'confirmsignup', component: () => import('components/auth/ConfirmSignUp') },
         //  { path: 'forgotpassword', component: () => import('components/auth/ForgotPassword') },
         //  { path: 'signout', component: () => import('components/auth/SignOut') }
