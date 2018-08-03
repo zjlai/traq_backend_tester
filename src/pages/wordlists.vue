@@ -1,11 +1,8 @@
 <template>
   <q-page padding>
-    <h3>Word Bank</h3>
-    <p>
-      Word Bank stored in the DB.
-    </p>
     <div class="row">
-      <div class="col-3">
+      <div class="fixed">
+        <h3>Word Bank</h3>
         <q-list link highlight separator no-border>
           <q-list-header>
             Word Bank Functions
@@ -21,8 +18,14 @@
               Create New Word List
             </q-item-main>
           </q-item>
+          <q-item link to="/wordlists/delete">
+            <q-item-main>
+              Delete Word List
+            </q-item-main>
+          </q-item>
         </q-list>
       </div>
+      <div class="col-3"></div>
       <div class="col-9 flex justify-center">
         <router-view />
       </div>
@@ -34,6 +37,7 @@
 export default {
   name: 'Wordbank',
   data () {
+    return {}
   }
 }
 </script>

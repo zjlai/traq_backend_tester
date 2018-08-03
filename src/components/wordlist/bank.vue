@@ -16,11 +16,10 @@
           :pagination.sync="pagination"
           :selected.sync="selected"
           selection="single"
+          :loading="loading"
         >
           <template slot="top-selection" slot-scope="props">
-            <q-btn color="secondary" flat label="Manage Words" class="q-mr-sm" />
-            <div class="col" />
-            <q-btn color="negative" flat round delete icon="delete" @click="deleteRow" />
+            <q-btn color="secondary" flat label="Manage Words" class="q-mr-sm" @click.native="manage"/>
           </template>
         </q-table>
       </div>
@@ -59,7 +58,8 @@ export default {
         page: 1,
         rowsPerPage: 20
       },
-      selected: []
+      selected: [],
+      loading: true
     }
   },
   mounted () {
@@ -68,6 +68,10 @@ export default {
   methods: {
     getWordList: async function () {
       this.wordListData = await API.get(API_NAME, path)
+      this.loading = false
+    },
+    manage () {
+      this.$router.push('manage/' + this.selected[0].wordListId)
     }
   }
 }

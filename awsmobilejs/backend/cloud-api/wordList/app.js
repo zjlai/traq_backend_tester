@@ -30,7 +30,7 @@ const awsmobile = {}
 
 if (hasDynamicPrefix) {
   tableName = mhprefix + '-' + tableName;
-} 
+}
 
 const UNAUTH = 'UNAUTH';
 
@@ -61,7 +61,7 @@ app.get('/wordList', function(req, res) {
   condition[partitionKeyName] = {
     ComparisonOperator: 'EQ'
   }
-  
+
   if (userIdPresent && req.apiGateway) {
     condition[partitionKeyName]['AttributeValueList'] = [req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH ];
   } else {
@@ -71,11 +71,15 @@ app.get('/wordList', function(req, res) {
       res.json({error: 'Wrong column type ' + err});
     }
   }
-
+  // for (var prop in req.apiGateway.event.queryStringParameters) {
+  //   if (req.apiGateway.event.queryStringParameters.hasOwnProperty(prop)) {
+  //     condition[prop] = JSON.parse(req.apiGateway.event.queryStringParameters[prop])
+  //   }
+  // }
   let queryParams = {
     TableName: tableName,
     KeyConditions: condition
-  } 
+  }
 
   dynamodb.query(queryParams, (err, data) => {
     if (err) {
@@ -134,7 +138,7 @@ app.get('/wordList/object/:wordListId', function(req, res) {
 *************************************/
 
 app.put(path, function(req, res) {
-  
+
   if (userIdPresent) {
     req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
@@ -157,7 +161,7 @@ app.put(path, function(req, res) {
 *************************************/
 
 app.post(path, function(req, res) {
-  
+
   if (userIdPresent) {
     req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
@@ -208,6 +212,49 @@ app.delete('/wordList/object/:wordListId', function(req, res) {
       res.json({error: err, url: req.url});
     } else {
       res.json({url: req.url, data: data});
+    }
+  });
+});
+
+/**************************************
+* CUSTOM FUNCTIONS *
+***************************************/
+/**************************************
+* HTTP get all non-archived wordslist *
+***************************************/
+app.get('/wordList/live', function(req, res) {
+  var condition = {}
+  condition[partitionKeyName] = {
+    ComparisonOperator: 'EQ'
+  }
+
+  if (userIdPresent && req.apiGateway) {
+    condition[partitionKeyName]['AttributeValueList'] = [req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH ];
+  } else {
+    try {
+      condition[partitionKeyName]['AttributeValueList'] = [ convertUrlType(req.params[partitionKeyName], partitionKeyType) ];
+    } catch(err) {
+      res.json({error: 'Wrong column type ' + err});
+    }
+  }
+
+  let queryParams = {
+    TableName: tableName,
+    KeyConditions: condition,
+    FilterExpression: "#s <> :stat",
+    ExpressionAttributeNames: {
+      "#s": "status"
+    },
+    ExpressionAttributeValues: {
+      ":stat": "archived"
+    }
+  }
+
+  dynamodb.query(queryParams, (err, data) => {
+    if (err) {
+      res.json({error: 'Could not load items: ' + err});
+    } else {
+      res.json(data.Items);
     }
   });
 });

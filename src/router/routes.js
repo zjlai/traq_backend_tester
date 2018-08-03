@@ -63,9 +63,10 @@ export default [
         path: '',
         component: () => import('pages/wordlists'),
         children: [
-          { path: 'bank', component: () => import('components/wordlist/wordlists_bank') },
-          { path: 'create', component: () => import('components/wordlist/create') }
-        //  { path: 'confirmsignup', component: () => import('components/auth/ConfirmSignUp') },
+          { path: 'bank', component: () => import('components/wordlist/bank') },
+          { path: 'create', component: () => import('components/wordlist/create') },
+          { path: 'delete', component: () => import('components/wordlist/delete') },
+          { path: 'manage/:wordlistid', component: () => import('components/wordlist/manage'), props: true }
         //  { path: 'forgotpassword', component: () => import('components/auth/ForgotPassword') },
         //  { path: 'signout', component: () => import('components/auth/SignOut') }
         ]

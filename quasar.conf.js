@@ -7,7 +7,8 @@ module.exports = function (ctx) {
       'i18n',
       'axios',
       'authentication',
-      'vuelidate'
+      'vuelidate',
+      'underscore'
     ],
     css: [
       'app.styl'
@@ -59,6 +60,7 @@ module.exports = function (ctx) {
         'QItemMain',
         'QItemSide',
         'QItemSeparator',
+        'QItemTile',
         'QCard',
         'QCardTitle',
         'QCardMain',
@@ -68,14 +70,18 @@ module.exports = function (ctx) {
         'QInput',
         'QSelect',
         'QDatetime',
-        'QTable'
+        'QTable',
+        'QSpinner',
+        'QSpinnerMat',
+        'QDialog'
       ],
       directives: [
         'Ripple'
       ],
       // Quasar plugins
       plugins: [
-        'Notify'
+        'Notify',
+        'Dialog'
       ]
       // iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
       // i18n: 'de' // Quasar language

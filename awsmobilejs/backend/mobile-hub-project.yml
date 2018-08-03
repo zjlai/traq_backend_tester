@@ -11,31 +11,31 @@ features:
           sdk-generation-stage-name: Development
         paths:
           /wordList: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/wordList-20180727231101.zip
+            codeFilename: uploads/wordList-20180802033031.zip
             description: 'Handler for calls to resource path : /wordList/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: 6kk5dMUi2EUtJ6xCwF6K4Yj1zx02+KznOjxBUyh5xio=
+            hashcode: B8ViwGz0WpXrSEyBnfiJmXuiiTJeHdff00GynN8y2L8=
             memorySize: '128'
-            modified: '2018-07-27T15:12:46.967+0000'
+            modified: '2018-08-01T19:31:14.825+0000'
             name: wordList
             runtime: nodejs6.10
             timeout: '3'
-            version: cYEMGMC_Z74uBBQbt2vDoKPgdaA28fYx
+            version: PybEFAlqdhbKVu16aOA_uNTi7__qkJKU
           '/wordList/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/wordList-20180727231101.zip
+            codeFilename: uploads/wordList-20180802033031.zip
             description: 'Handler for calls to resource path : /wordList/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: 6kk5dMUi2EUtJ6xCwF6K4Yj1zx02+KznOjxBUyh5xio=
+            hashcode: B8ViwGz0WpXrSEyBnfiJmXuiiTJeHdff00GynN8y2L8=
             memorySize: '128'
-            modified: '2018-07-27T15:12:46.967+0000'
+            modified: '2018-08-01T19:31:14.825+0000'
             name: wordList
             runtime: nodejs6.10
             timeout: '3'
-            version: Ua3Ajqq8PUDuNuHh8.7wIM8bXjkXEus8
+            version: HC5cRqKClzI2jXRLR30zduwvlgiTPcBF
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
@@ -84,6 +84,7 @@ features:
               status: S
               studentCount: N
               userId: S
+              userName: S
               wordCount: S
               wordListId: S
               wordListName: S
@@ -100,7 +101,7 @@ features:
             rangeKeyName: wordListId
             rangeKeyType: S
             tableName: ___DYNAMIC_PREFIX___-wordList
-            tablePrivacy: public
+            tablePrivacy: protected
   mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
     components:
       analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}

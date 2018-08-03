@@ -23,12 +23,13 @@
           <br /><br />
           <strong>Example:</strong>
           <br /><em>
-          { <br />
+          [{ <br />
             "definition": "A fruit that grows on trees", <br />
             "examples":
-            {
-              "english": "Snow white ate a poison apple and fell into a deep sleep"
-            }, <br />
+            [{
+              "lang": "english",
+              "example": "Snow white ate a poison apple and fell into a deep sleep"
+            }], <br />
             "word": "Apple" <br />
           }, <br />
           { <br />
@@ -38,7 +39,7 @@
               "english": "only students have access to the university library"
             }, <br />
             "word": "access" <br />
-          }</em>
+          }]</em>
           </p>
           <hr />
           <q-input type="textarea" v-model.trim="words"  :max-height="100" rows="10" placeholder="" />
@@ -129,9 +130,9 @@ export default {
       if (this.words[this.words.length - 1] === ',') {
         this.words = this.words.slice(0, -1)
       }
-      let jsonlist = '[' + this.words + ']'
+      //  let jsonlist = '[' + this.words + ']'
       try {
-        this.wordlist.words = JSON.parse(jsonlist)
+        this.wordlist.words = JSON.parse(this.words)
       } catch (err) {
         if (err.name === 'SyntaxError') {
           throw new SyntaxError('JSON not formed properly. Please check data. Trace: ' + err.message)
