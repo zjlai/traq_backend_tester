@@ -66,6 +66,7 @@ export default [
           { path: 'bank', component: () => import('components/wordlist/bank') },
           { path: 'create', component: () => import('components/wordlist/create') },
           { path: 'delete', component: () => import('components/wordlist/delete') },
+          { path: 'subscriptions', component: () => import('components/wordlist/myWordLists') },
           { path: 'manage/:wordlistid', component: () => import('components/wordlist/manage'), props: true }
         //  { path: 'forgotpassword', component: () => import('components/auth/ForgotPassword') },
         //  { path: 'signout', component: () => import('components/auth/SignOut') }

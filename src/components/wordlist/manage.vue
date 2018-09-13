@@ -157,16 +157,11 @@ export default {
       edited.examples = JSON.parse(val.examples)
     },
     async saveChanges () {
-      console.log('saving')
       let req = {
         body: this.wordlist
       }
       let update = await API.put(API_NAME, path, req)
-      update.then(res => {
-        console.log(res)
-      }).catch(err => {
-        console.log(err)
-      })
+      console.log(update)
     }
   }
 }

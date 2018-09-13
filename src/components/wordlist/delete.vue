@@ -77,11 +77,16 @@ export default {
       this.getWordList()
     },
     async getWordList () {
-      const apiPath = '/wordList/live'
-      this.wordListData = await API.get(API_NAME, apiPath)
+    //  const apiPath = '/wordList/live'
+    //  this.wordListData = await API.get(API_NAME, apiPath)
       this.loading = false
+      let test = await API.get('studentAPI', '/students')
+      console.log(test)
+      let all = await API.get('studentAPI', '/students/all')
+      console.log(all)
+      let student = await API.get('studentAPI', '/students/test')
+      console.log(student)
     }
-
   }
 }
 </script>

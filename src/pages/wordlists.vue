@@ -23,6 +23,11 @@
               Delete Word List
             </q-item-main>
           </q-item>
+          <q-item link to="/wordlists/subscriptions">
+            <q-item-main>
+              My Subscribed Lists
+            </q-item-main>
+          </q-item>
         </q-list>
       </div>
       <div class="col-3"></div>

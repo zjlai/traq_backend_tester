@@ -4,38 +4,306 @@ apps:
 features:
   cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
     components:
-      wordListCRUD: !com.amazonaws.mobilehub.v0.API 
+      studentAPI: !com.amazonaws.mobilehub.v0.API 
         attributes:
-          name: wordListCRUD
-          requires-signin: false
+          name: studentAPI
+          requires-signin: true
           sdk-generation-stage-name: Development
         paths:
-          /wordList: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/wordList-20180802033031.zip
-            description: 'Handler for calls to resource path : /wordList/{proxy+}'
+          /courses: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
-            environment: {}
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: B8ViwGz0WpXrSEyBnfiJmXuiiTJeHdff00GynN8y2L8=
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
             memorySize: '128'
-            modified: '2018-08-01T19:31:14.825+0000'
-            name: wordList
-            runtime: nodejs6.10
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
             timeout: '3'
-            version: PybEFAlqdhbKVu16aOA_uNTi7__qkJKU
-          '/wordList/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/wordList-20180802033031.zip
-            description: 'Handler for calls to resource path : /wordList/{proxy+}'
+            version: T6OHulE.4ecndVRqO71T2bk2_gYTxDMD
+            vpcId: vpc-a69439c1
+          '/courses/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
-            environment: {}
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: B8ViwGz0WpXrSEyBnfiJmXuiiTJeHdff00GynN8y2L8=
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
             memorySize: '128'
-            modified: '2018-08-01T19:31:14.825+0000'
-            name: wordList
-            runtime: nodejs6.10
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
             timeout: '3'
-            version: HC5cRqKClzI2jXRLR30zduwvlgiTPcBF
+            version: pamfDCpqingwcubdK77mDCCcWgKQXoiX
+            vpcId: vpc-a69439c1
+          /milestones: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: O6I4um.BAspnCO1wDuyYq59WmZreYVbD
+            vpcId: vpc-a69439c1
+          '/milestones/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: 0U2KWrQ88Z0StAwbLCAUOxuJoGJqIa6J
+            vpcId: vpc-a69439c1
+          /stats: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: h_A4VvVrihDX_uRai01el9DW9t7PD24i
+            vpcId: vpc-a69439c1
+          '/stats/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: 9dSGQPIKtl5MmRAleJtWQH8xaxVwd91R
+            vpcId: vpc-a69439c1
+          /students: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: YuQYa6vrJHC24YL6YSWl1Aum1qyYh5OC
+            vpcId: vpc-a69439c1
+          '/students/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: n4jyUXwTqyy3cP_IEvbS73yHcAlZ3RQQ
+            vpcId: vpc-a69439c1
+          /tests: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: .KehDt3nHEe7CK6rdiWx8olKAmYWiEk2
+            vpcId: vpc-a69439c1
+          '/tests/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: ZzUwLfkJn.XVMORuTwzACpe2npM0UYsU
+            vpcId: vpc-a69439c1
+          /wordbank: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: qIF5VwVLUTCjfhBVuNWlwJuAq1KgAcO6
+            vpcId: vpc-a69439c1
+          '/wordbank/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            memorySize: '128'
+            modified: '2018-09-12T09:55:24.284+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: 89rJJFSOB..1zR2xEBLK7vOgM7NYjX6Y
+            vpcId: vpc-a69439c1
+          /wordmaps: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: 2Q5+mQZ4cTAgj5j42ofR52MLNF5nk15MMRKoH+ip3Ak=
+            memorySize: '128'
+            modified: '2018-09-12T10:08:04.255+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: csGmPTBPa0LjUUQAuvrzFNzD2YOMHLBG
+            vpcId: vpc-a69439c1
+          '/wordmaps/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180912172951.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: 2Q5+mQZ4cTAgj5j42ofR52MLNF5nk15MMRKoH+ip3Ak=
+            memorySize: '128'
+            modified: '2018-09-12T10:08:04.255+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '3'
+            version: UAA_KYBPUgZFsbWgSd5fd3BAtSuPfa0f
+            vpcId: vpc-a69439c1
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
@@ -48,63 +316,21 @@ features:
         tables:
           - !com.amazonaws.mobilehub.v0.NoSQLTable 
             attributes:
-              dateLearned: S
-              dateMastered: S
-              definition: S
-              examples: M
-              records: M
-              revisedCount: N
-              revisedDuration: N
+              dateSubscribed: S
+              rowId: S
               status: S
               userId: S
-              word: S
-              wordlist: S
-            hashKeyName: userId
-            hashKeyType: S
-            indexes:
-              - !com.amazonaws.mobilehub.v0.NoSQLIndex 
-                hashKeyName: userId
-                hashKeyType: S
-                indexName: userId-word
-                rangeKeyName: word
-                rangeKeyType: S
-              - !com.amazonaws.mobilehub.v0.NoSQLIndex 
-                hashKeyName: userId
-                hashKeyType: S
-                indexName: userId-wordlist
-                rangeKeyName: wordlist
-                rangeKeyType: S
-            rangeKeyName: status
-            rangeKeyType: S
-            tableName: ___DYNAMIC_PREFIX___-MyWordBank
-            tablePrivacy: private
-          - !com.amazonaws.mobilehub.v0.NoSQLTable 
-            attributes:
-              dateCreated: S
-              status: S
-              studentCount: N
-              userId: S
-              userName: S
               wordCount: S
               wordListId: S
               wordListName: S
-              words: L
+              wordListOwner: S
             hashKeyName: userId
             hashKeyType: S
-            indexes:
-              - !com.amazonaws.mobilehub.v0.NoSQLIndex 
-                hashKeyName: userId
-                hashKeyType: S
-                indexName: userId-studentCount
-                rangeKeyName: studentCount
-                rangeKeyType: N
             rangeKeyName: wordListId
             rangeKeyType: S
-            tableName: ___DYNAMIC_PREFIX___-wordList
+            tableName: ___DYNAMIC_PREFIX___-subscriptions
             tablePrivacy: protected
-  mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
-    components:
-      analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}
+  mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint {}
   sign-in: !com.amazonaws.mobilehub.v0.SignIn 
     attributes:
       enabled: true
