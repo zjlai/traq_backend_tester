@@ -77,15 +77,27 @@ export default {
       this.getWordList()
     },
     async getWordList () {
-    //  const apiPath = '/wordList/live'
-    //  this.wordListData = await API.get(API_NAME, apiPath)
-      this.loading = false
-      let test = await API.get('studentAPI', '/students')
-      console.log(test)
-      let all = await API.get('studentAPI', '/students/all')
-      console.log(all)
-      let student = await API.get('studentAPI', '/students/test')
-      console.log(student)
+      //  const apiPath = '/wordList/live'
+      //  this.wordListData = await API.get(API_NAME, apiPath)
+      // this.loading = false
+      // let test = await API.get('studentAPI', '/students')
+      // console.log(test)
+      // let all = await API.get('studentAPI', '/students/all')
+      // console.log(all)
+      //  let student = await API.get('studentAPI', '/students/test')
+      //  console.log(student)
+      const myInit = {
+        body: {
+          email: 'zijian@traqxion.com',
+          ethnicity: 'chinese',
+          nationality: 'singaporean',
+          dob: '1987-10-21',
+          contact_num: '12345678',
+          proficiency: JSON.stringify({'IELTS': 4.5, 'TOEFL': 10})
+        }
+      }
+      let newstudent = await API.post('studentAPI', '/students', myInit)
+      console.log(newstudent)
     }
   }
 }

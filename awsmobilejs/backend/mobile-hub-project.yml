@@ -11,7 +11,7 @@ features:
           sdk-generation-stage-name: Development
         paths:
           /courses: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -21,18 +21,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: T6OHulE.4ecndVRqO71T2bk2_gYTxDMD
+            timeout: '5'
+            version: 8pwx_Q6qw6tNNOkbyYEspFDzdYRYe2wN
             vpcId: vpc-a69439c1
           '/courses/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -42,18 +42,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: pamfDCpqingwcubdK77mDCCcWgKQXoiX
+            timeout: '5'
+            version: TLPsya9zOi0QSg7N40OYedKagGbm_9Bq
             vpcId: vpc-a69439c1
           /milestones: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -63,18 +63,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: O6I4um.BAspnCO1wDuyYq59WmZreYVbD
+            timeout: '5'
+            version: pSnLvwxTAzl14T.J0mHR.41xbRzhgISQ
             vpcId: vpc-a69439c1
           '/milestones/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -84,18 +84,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: 0U2KWrQ88Z0StAwbLCAUOxuJoGJqIa6J
+            timeout: '5'
+            version: b3WVLvCOQU0w0IeAGvEzMLdiclKwtB_8
             vpcId: vpc-a69439c1
           /stats: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -105,18 +105,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: h_A4VvVrihDX_uRai01el9DW9t7PD24i
+            timeout: '5'
+            version: iV0zHTH5mhAdObhWGF8ilifEFS9EeYIj
             vpcId: vpc-a69439c1
           '/stats/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -126,18 +126,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: 9dSGQPIKtl5MmRAleJtWQH8xaxVwd91R
+            timeout: '5'
+            version: MMrDBLChCy.ElWDOnnka.GsXEoz4WsPg
             vpcId: vpc-a69439c1
           /students: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -147,18 +147,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: YuQYa6vrJHC24YL6YSWl1Aum1qyYh5OC
+            timeout: '5'
+            version: im5qjycYSfRVFlMpfovL.dforxB1UAdS
             vpcId: vpc-a69439c1
           '/students/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -168,18 +168,60 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: n4jyUXwTqyy3cP_IEvbS73yHcAlZ3RQQ
+            timeout: '5'
+            version: WY6dHXSCMIUlvg_1aJ7NvvKSJzz7Dl5q
+            vpcId: vpc-a69439c1
+          /teachers: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180922054204.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
+            memorySize: '128'
+            modified: '2018-09-21T21:43:01.666+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '5'
+            version: 7nu3LK3Vt16HR71OAogWhjxSkbKAzFQZ
+            vpcId: vpc-a69439c1
+          '/teachers/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/studentAPI-20180922054204.zip
+            description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
+            enableCORS: true
+            environment:
+              RDS_DB_NAME: kaplan
+              RDS_HOST: rdsopen.ccoav2iagdoo.ap-southeast-1.rds.amazonaws.com
+              RDS_PASSWORD: tsctsc12
+              RDS_PORT: '5432'
+              RDS_USERNAME: traqxion
+            handler: lambda.handler
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
+            memorySize: '128'
+            modified: '2018-09-21T21:43:01.666+0000'
+            name: studentAPI
+            runtime: nodejs8.10
+            securityGroups: sg-36748d4f
+            subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
+            timeout: '5'
+            version: lDLQftDEko_MktsaNzY8IrdLNVEWwu5S
             vpcId: vpc-a69439c1
           /tests: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -189,18 +231,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: .KehDt3nHEe7CK6rdiWx8olKAmYWiEk2
+            timeout: '5'
+            version: V.6NOXP3uZMWYXRiSoa..BWzRQqnUaew
             vpcId: vpc-a69439c1
           '/tests/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -210,18 +252,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: ZzUwLfkJn.XVMORuTwzACpe2npM0UYsU
+            timeout: '5'
+            version: V5rOZi7yBXLxuk5h1KRtJPB10mitjL6P
             vpcId: vpc-a69439c1
           /wordbank: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -231,18 +273,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: qIF5VwVLUTCjfhBVuNWlwJuAq1KgAcO6
+            timeout: '5'
+            version: JqFSNjN.O710NLHtx9QiRvvYYrW4bmHu
             vpcId: vpc-a69439c1
           '/wordbank/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -252,18 +294,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: D71QOP+kQASGURHAxegi2otdLHNiyN14sLY7VW3ugMw=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T09:55:24.284+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: 89rJJFSOB..1zR2xEBLK7vOgM7NYjX6Y
+            timeout: '5'
+            version: FGJZQsGeZAb2B0KT4GTY9zhECu0wjbTx
             vpcId: vpc-a69439c1
           /wordmaps: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -273,18 +315,18 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: 2Q5+mQZ4cTAgj5j42ofR52MLNF5nk15MMRKoH+ip3Ak=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T10:08:04.255+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: csGmPTBPa0LjUUQAuvrzFNzD2YOMHLBG
+            timeout: '5'
+            version: D88jwwvh9o5MIDX8CDVZYAX_jTIxB0_w
             vpcId: vpc-a69439c1
           '/wordmaps/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/studentAPI-20180912172951.zip
+            codeFilename: uploads/studentAPI-20180922054204.zip
             description: 'Handler for calls to resource path : /wordmaps/{proxy+}'
             enableCORS: true
             environment:
@@ -294,15 +336,15 @@ features:
               RDS_PORT: '5432'
               RDS_USERNAME: traqxion
             handler: lambda.handler
-            hashcode: 2Q5+mQZ4cTAgj5j42ofR52MLNF5nk15MMRKoH+ip3Ak=
+            hashcode: IrxCxvWGtwTmcM1CMoVb0EbeVlFxYlvzCMup99ipr9g=
             memorySize: '128'
-            modified: '2018-09-12T10:08:04.255+0000'
+            modified: '2018-09-21T21:43:01.666+0000'
             name: studentAPI
             runtime: nodejs8.10
             securityGroups: sg-36748d4f
             subnetIds: 'subnet-a1a2c3e8,subnet-77595f31,subnet-dc83f2bb'
-            timeout: '3'
-            version: UAA_KYBPUgZFsbWgSd5fd3BAtSuPfa0f
+            timeout: '5'
+            version: gsJquUmP1J9KjHGxSk.zZd8wir9Xs_WF
             vpcId: vpc-a69439c1
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:

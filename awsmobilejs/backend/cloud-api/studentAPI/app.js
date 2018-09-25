@@ -10,16 +10,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var AWS = require('aws-sdk')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-const { Client } = require('pg')
-const asyncHandler = require('express-async-handler')
 
-const postgresdb = process.env.RDS_DB_NAME
-const postgresuser = process.env.RDS_USERNAME
-const postgrespw = process.env.RDS_PASSWORD
-const postgreshost = process.env.RDS_HOST
-const postgresport = process.env.RDS_PORT
-
-const connectionString = `postgresql://${postgresuser}:${postgrespw}@${postgreshost}:${postgresport}/${postgresdb}`
 // declare a new express app
 var app = express()
 app.use(bodyParser.json())
@@ -40,47 +31,6 @@ AWS.config.update({ region: process.env.REGION })
  **********************/
 app.use('/', require('./routes/index'))
 
-/****************************
-* Example post method *
-****************************/
-
-app.post('/students', function(req, res) {
-  // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
-
-app.post('/students/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'post call succeed!', url: req.url, body: req.body})
-});
-
-/****************************
-* Example post method *
-****************************/
-
-app.put('/students', function(req, res) {
-  // Add your code here
-  res.json({success: 'put call succeed!', url: req.url, body: req.body})
-});
-
-app.put('/students/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'put call succeed!', url: req.url, body: req.body})
-});
-
-/****************************
-* Example delete method *
-****************************/
-
-app.delete('/students', function(req, res) {
-  // Add your code here
-  res.json({success: 'delete call succeed!', url: req.url});
-});
-
-app.delete('/students/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'delete call succeed!', url: req.url});
-});
 
 app.listen(3000, function() {
     console.log("App started")
